@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Estilizada</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid #666; /* Borda mediana da tabela */
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 3px solid #ccc; /* Bordas internas */
+        }
+
+        th.esp-col {
+            background-color: rgb(70, 68, 223);
+            border: none;
+        }
+
+        th.esp-col::after {
+            content: "Status Espirometrias datas 14/11/2023 e 21/11/2023";
+            display: block;
+            margin-top: 10px;
+            color: rgb(236, 226, 226);
+            font-style:italic;
+            font-weight: bold;
+            font-size: larger;
+            font-family:sans-serif;
+        }
+
+        th.normal-col {
+            background-color: rgb(68, 150, 136);
+            color: white;
+        }
+        
+        .PensiIMG {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: blue;
+        }
+
+        body {
+            font-size:small;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="http://intranet.sabara.com.br/imgs/logo.jpg" alt="Logo Pensi" class="PensiIMG">
+        </div>
+    </header>
+    <table>
+        <tr>
+            <th class="esp-col" colspan="9"></th>
+        </tr>
+        <tr>
+            <th class="normal-col">Data do exame</th>
+            <th class="normal-col">Atendimento</th>
+            <th class="normal-col">Nome</th>
+            <th class="normal-col">Laudo feito</th>
+            <th class="normal-col">Data do laudo</th>
+            <th class="normal-col">Status</th>
+            <th class="normal-col">Laudo</th>
+        </tr>
+        <tr>
+            <th>14/11/2023</th>
+            <th>1862487</th>
+            <th>LORENZO RODRIGUES GAZANI</th>
+            <th class="celulaLaudo">SIM</th>
+            <th>23/11/2023</th>
+            <th style="background-color:red">Atenção, paciente deve refazer o exame a pedido do DR Gustavo</th>
+            <th>Laudo no MV</th>
+        </tr>
+
+        <tr>
+            <th>21/11/2023</th>
+            <th>1865585</th>
+            <th>RAYLANNE DOS SANTOS LIRA</th>
+            <th class="celulaLaudo">SIM</th>
+            <th>23/11/2023</th>
+            <th style="background-color:red">Atenção, paciente deve refazer o exame a pedido do DR Gustavo</th>
+            <th>Laudo no MV</th>
+        </tr>
+
+        <tr>
+            <th>14/11/2023</th>
+            <th>1862506</th>
+            <th>DAVID BARBOSA OLIVEIRA SANTOS</th>
+            <th class="celulaLaudo">NÃO</th>
+            <th>N/A</th>
+            <th style="background-color:rgb(255, 145, 0)">Atenção, paciente deve refazer o exame a pedido da Fisioterapeuta Andréia, retorno remarcado para o dia 28/11, é importante confirmar.</th>
+            <th>...</th>
+        </tr>
+
+        <tr>
+            <th>14/11/2023</th>
+            <th>1862536</th>
+            <th>VICTOR MANOEL TRAJANO DA SILVA VIA</th>
+            <th class="celulaLaudo">NÃO</th>
+            <th>N/A</th>
+            <th style="background-color:rgb(255, 145, 0)">Atenção, paciente deve refazer o exame a pedido da Fisioterapeuta Andréia, retorno remarcado para o dia 05/12, é importante confirmar.</th>
+            <th>...</th>
+        </tr>
+
+        <tr>
+            <th>21/11/2023</th>
+            <th>1865582</th>
+            <th>MIGUEL TORRES RODRIGUES</th>
+            <th class="celulaLaudo">NÃO</th>
+            <th>N/A</th>
+            <th style="background-color:rgb(255, 145, 0)">Atenção, paciente deve refazer o exame a pedido da Fisioterapeuta Andréia, remarcar quando o mesmo completar 6 anos à partir de 04/04/2024, é importante confirmar.</th>
+            <th>...</th>
+        </tr>
+
+        <tr>
+            <th>14/11/2023</th>
+            <th>1862517</th>
+            <th>ALEX DA SILVA OLIVEIRA</th>
+            <th class="celulaLaudo">NÃO</th>
+            <th>N/A</th>
+            <th style="background-color:rgb(255, 145, 0)">Atenção, paciente deve refazer o exame a pedido da Fisioterapeuta Andréia, é importante confirmar se ja foi remarcado.</th>
+            <th>...</th>
+        </tr>
+
+        <tr>
+            <th>14/11/2023</th>
+            <th>1862586</th>
+            <th>ELOAH BUENO SAMPAIO</th>
+            <th class="celulaLaudo">NÃO</th>
+            <th>N/A</th>
+            <th style="background-color:rgb(255, 145, 0)">Atenção, paciente deve refazer o exame a pedido da Fisioterapeuta Andréia, é importante confirmar se ja foi remarcado.</th>
+            <th>...</th>
+        </tr>
+
+        <tr>
+            <th>14/11/2023</th>
+            <th>1862483</th>
+            <th>VINICIUS AUGUSTO TELES DOS SANTOS</th>
+            <th class="celulaLaudo">SIM</th>
+            <th>23/11/2023</th>
+            <th style="background-color:green">Tudo OK, pode remarcar o retorno.</th>
+            <th>Laudo no MV</th>
+        </tr>
+
+        <tr>
+            <th>21/11/2023</th>
+            <th>1865666</th>
+            <th>RAPHAEL DE OLIVEIRA LOURENCO</th>
+            <th class="celulaLaudo">SIM</th>
+            <th>23/11/2023</th>
+            <th style="background-color:green">Tudo OK, pode remarcar o retorno.</th>
+            <th>Laudo no MV</th>
+        </tr>
+
+        <tr>
+            <th>21/11/2023</th>
+            <th>1865679</th>
+            <th>GIOVANNA BONFIM PEREIRA</th>
+            <th class="celulaLaudo">SIM</th>
+            <th>23/11/2023</th>
+            <th style="background-color:green">Tudo OK, pode remarcar o retorno.</th>
+            <th>Laudo no MV</th>
+        </tr>
+
+
+      
+        
+        <!--<tr>
+            <th>10/10/2023</th>
+            <th>1845297</th>
+            <th>YASMIN SILVA BASTOS</th>
+            <th class="celulaPDF">SIM</th>
+            <th class="celulaLaudo">SIM</th>
+            <th>23/10/2023</th>
+            <th style="background-color:red">Paciente deve refazer exame a pedido do Dr Gustavo</th>
+            <th>Laudo no MV, mas deve ser refeito o exame</th>
+        </tr>-->
+        <!--<tr>
+            <th>10/10/2023</th>
+            <th>1845315</th>
+            <th>SOPHIA GABRIELLE CHAVES RIBEIRO</th>
+            <th class="celulaPDF">SIM</th>
+            <th class="celulaLaudo">SIM</th>
+            <th>23/10/2023</th>
+            <th style="background-color:red">Paciente deve refazer exame a pedido do Dr Gustavo</th>
+            <th>Laudo no MV, mas deve ser refeito o exame</th>
+        </tr>-->
+       
+    </table>
+       <div><h5>Total de ocorrências: 04</h5> </div>
+       
+    <script>
+        const celulaPDF = document.querySelectorAll('.celulaPDF');
+       
+
+        celulaPDF.forEach(function(celula) {
+            if (celula.textContent.trim() === 'SIM') {
+                celula.style.backgroundColor = 'green';
+            }
+        });
+
+        celulaPDF.forEach(function(celula) {
+            if (celula.textContent.trim() === 'NÃO') {
+                celula.style.backgroundColor = 'red';
+            }
+        });
+
+        const celulaLaudo = document.querySelectorAll('.celulaLaudo');
+       
+
+        celulaLaudo.forEach(function(celula) {
+            if (celula.textContent.trim() === 'SIM') {
+                celula.style.backgroundColor = 'green';
+            }
+        });
+
+        celulaLaudo.forEach(function(celula) {
+            if (celula.textContent.trim() === 'NÃO') {
+                celula.style.backgroundColor = 'red';
+            }
+        });
+
+    
+        celulaRepetir.forEach(function(celula) {
+            if (celula.textContent.trim() === 'NÃO') {
+                celula.style.backgroundColor = 'red';
+            }
+        });
+
+        const celulaComunicado = document.querySelectorAll('.celulaComunicado');
+       
+
+        celulaComunicado.forEach(function(celula) {
+            if (celula.textContent.trim() === 'SIM') {
+                celula.style.backgroundColor = 'green';
+            }
+        });
+
+        celulaComunicado.forEach(function(celula) {
+            if (celula.textContent.trim() === 'NÃO') {
+                celula.style.backgroundColor = 'red';
+            }
+        });
+    </script>
+</body>
+</html>
